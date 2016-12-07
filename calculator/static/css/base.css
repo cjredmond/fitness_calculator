@@ -1,0 +1,13 @@
+.resize {
+  width: 200px !important;
+  background-color: orange;
+  font-size: 18px;
+}
+
+.blue {
+  color: blue;
+}
+
+.answers {
+  font-size: 20px;
+}

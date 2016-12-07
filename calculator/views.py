@@ -23,8 +23,8 @@ class IndexView(TemplateView):
             goal = "M"
             active = 1
 
-        context['stuff'] = round(calorie_count(weight,goal,active,gender),0)
-        context['protein'] = round(protein_count(weight,goal,active,gender),0)
-        context['carbs'] = round(carbs_count(weight,goal,active,gender),0)
+        context['stuff'] = int(calorie_count(weight,goal,active,gender))
+        context['protein'] = int(protein_count(weight,goal,active,gender))
+        context['carbs'] = int(carbs_count(weight,goal,active,gender))
 
         return context
