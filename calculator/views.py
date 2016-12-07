@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from calculator.calcs import calorie_count
+from calculator.calcs import calorie_count, protein_count
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -23,6 +23,7 @@ class IndexView(TemplateView):
             goal = "M"
             active = 1
 
-        context['stuff'] = calorie_count(weight,goal,active, gender)
+        context['stuff'] = round(calorie_count(weight,goal,active,gender),0)
+        context['protein'] = round(protein_count(weight,goal,active,gender),0)
 
         return context
