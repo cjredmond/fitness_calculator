@@ -1,13 +1,22 @@
 .resize {
   width: 200px !important;
-  background-color: orange;
+  background-color: black;
   font-size: 18px;
+  color: white;
 }
 
-.blue {
-  color: blue;
+.resize:hover {
+  border: 3px solid gold;
+}
+
+.container {
+  color: white;
 }
 
 .answers {
   font-size: 20px;
+}
+
+body {
+  background-color: red;
 }

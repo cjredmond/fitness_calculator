@@ -84,7 +84,14 @@
     </div>
   </div>
 
-
+<input type="button" class="btn btn-warning" value="COLOR" onclick="chBackcolor('blue');">
 </div>
+<script type="text/javascript">
+var myColors = ['red', 'purple', '#E84751', 'blue', 'orange', '#323643', 'lightblue', 'silver', 'green'];
+function chBackcolor(color) {
+ var randomize = Math.floor(Math.random()*myColors.length);
+ document.body.style.background = myColors[randomize];
+}
+</script>
   </body>
 </html>

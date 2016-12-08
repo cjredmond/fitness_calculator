@@ -22,6 +22,7 @@ class IndexView(TemplateView):
             age = 1
             goal = "M"
             active = 1
+            gender = 1.1
 
         context['stuff'] = int(calorie_count(weight,goal,active,gender))
         context['protein'] = int(protein_count(weight,goal,active,gender))
