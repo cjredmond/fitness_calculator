@@ -7,6 +7,8 @@
 
 .resize:hover {
   border: 3px solid gold;
+  background-color: yellow;
+  color: black;
 }
 
 .container {
@@ -19,4 +21,8 @@
 
 body {
   background-color: red;
+}
+
+#holder {
+  background-color: black;
 }

@@ -84,14 +84,32 @@
     </div>
   </div>
 
-<input type="button" class="btn btn-warning" value="COLOR" onclick="chBackcolor('blue');">
+<input type="button" class="btn btn-warning" value="COLOR" onclick="chBackcolor();">
+<br>
+<input id="holder" type="button" class="btn btn-success" value="CHANGE" onclick="chDivHeight(); chDivWidth();">
+
+
 </div>
 <script type="text/javascript">
 var myColors = ['red', 'purple', '#E84751', 'blue', 'orange', '#323643', 'lightblue', 'silver', 'green'];
-function chBackcolor(color) {
+function chBackcolor() {
  var randomize = Math.floor(Math.random()*myColors.length);
  document.body.style.background = myColors[randomize];
 }
+
+var myHeights = ['200px', '100px', '50px']
+function chDivHeight() {
+  var randomize = Math.floor(Math.random()*myHeights.length);
+  document.getElementById('holder').style.height = myHeights[randomize];
+}
+
+var myWidths = ['100px', '150px', '200px']
+function chDivWidth() {
+  var randomize = Math.floor(Math.random()*myWidths.length);
+  document.getElementById('holder').style.width = myWidths[randomize];
+}
+
 </script>
+
   </body>
 </html>
