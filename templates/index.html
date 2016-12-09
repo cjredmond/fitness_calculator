@@ -11,7 +11,7 @@
 <div class="container">
 <br><br>
 
-    <form class="form-inline" action="" method="get">
+    <form class="form-inline" name="Form" action="" method="get">
       {% csrf_token %}
       <div class="row">
         <div class="col-md-1">
@@ -70,7 +70,7 @@
       </div>
     <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-md-3"><input type="submit" class='btn resize' value="SUBMIT"></div>
+      <div class="col-md-3"><input type="submit" onclick="return IsEmpty();" class='btn resize' value="SUBMIT"></div>
     </div>
     </form>
 
@@ -97,18 +97,26 @@ function chBackcolor() {
  document.body.style.background = myColors[randomize];
 }
 
-var myHeights = ['200px', '100px', '50px']
+var myHeights = ['200px', '100px', '50px', '300px', '250px']
 function chDivHeight() {
   var randomize = Math.floor(Math.random()*myHeights.length);
   document.getElementById('holder').style.height = myHeights[randomize];
 }
 
-var myWidths = ['100px', '150px', '200px']
+var myWidths = ['100px', '150px', '200px', '300px']
 function chDivWidth() {
   var randomize = Math.floor(Math.random()*myWidths.length);
   document.getElementById('holder').style.width = myWidths[randomize];
 }
 
+function IsEmpty(){
+  if(document.forms['Form'].age.value === "" || document.forms['Form'].weight.value === "" )
+  {
+    alert("Please fill in all fields");
+    return false;
+  }
+    return true;
+}
 </script>
 
   </body>
